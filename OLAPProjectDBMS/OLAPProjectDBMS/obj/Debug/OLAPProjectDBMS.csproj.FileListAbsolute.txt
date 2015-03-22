@@ -1,0 +1,5 @@
+C:\Users\Suraiya\documents\visual studio 2010\Projects\OLAPProjectDBMS\OLAPProjectDBMS\bin\OLAPProjectDBMS.dll
+C:\Users\Suraiya\documents\visual studio 2010\Projects\OLAPProjectDBMS\OLAPProjectDBMS\bin\OLAPProjectDBMS.pdb
+C:\Users\Suraiya\documents\visual studio 2010\Projects\OLAPProjectDBMS\OLAPProjectDBMS\obj\Debug\OLAPProjectDBMS.dll
+C:\Users\Suraiya\documents\visual studio 2010\Projects\OLAPProjectDBMS\OLAPProjectDBMS\obj\Debug\OLAPProjectDBMS.pdb
+C:\Users\Suraiya\documents\visual studio 2010\Projects\OLAPProjectDBMS\OLAPProjectDBMS\obj\Debug\OLAPProjectDBMS.csprojResolveAssemblyReference.cache

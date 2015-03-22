@@ -1,0 +1,495 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><link href="SSAS%20Data%20Analysis%203_files/StyleSheet1.css" rel="Stylesheet" type="text/css"><title>
+	SSAS Data Analysis
+</title><style type="text/css">
+	.TreeView1_0 { text-decoration:none; }
+	.TreeView1_1 { border-style:none; }
+	.TreeView1_2 {  }
+	.TreeView1_3 { border-style:none; }
+	.TreeView1_4 {  }
+	.TreeView1_5 { border-style:none; }
+	.TreeView1_6 {  }
+	.TreeView1_7 { border-style:none; }
+	.TreeView1_8 {  }
+
+</style></head>
+<body>
+    <form method="post" action="Default.aspx" id="form1">
+<div class="aspNetHidden">
+<input name="TreeView1_ExpandState" id="TreeView1_ExpandState" value="eeunnununnnunnunnnnnnnunnnnnnnununnnnneunnunnunnnunnnnnnnunnunnnnunn" type="hidden">
+<input name="TreeView1_SelectedNode" id="TreeView1_SelectedNode" value="" type="hidden">
+<input name="__EVENTTARGET" id="__EVENTTARGET" value="" type="hidden">
+<input name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" type="hidden">
+<input name="TreeView1_PopulateLog" id="TreeView1_PopulateLog" value="" type="hidden">
+<input name="__LASTFOCUS" id="__LASTFOCUS" value="" type="hidden">
+<input name="__VIEWSTATE" id="__VIEWSTATE" value="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SUQfBAsrBANkFCsAAhYEHwMFCFF1YW50aXR5HwQLKwQDZBQrAAIWBB8DBQ5UcmFuc2FjdGlvbiBJRB8ECysEA2QUKwACFgQfAwUMVW5pdCBNZWFzdXJlHwQLKwQDFCsAAwUHMDowLDA6MRQrAAIWBB8DBRFVbml0IE1lYXN1cmUuTmFtZR8ECysEA2QUKwACFgQfAwUeVW5pdCBNZWFzdXJlLlVuaXQgTWVhc3VyZSBDb2RlHwQLKwQDZGQCCw8QZBAVAwZDaG9vc2UNU2FtcGxlT0xBUFBybw1TU0FTV2FyZWhvdXNlFQMGQ2hvb3NlDVNhbXBsZU9MQVBQcm8NU1NBU1dhcmVob3VzZRQrAwNnZ2cWAQIBZAIPDxBkEBUCBkNob29zZRNBZHZlbnR1cmUgV29ya3MyMDEyFQIGQ2hvb3NlE0FkdmVudHVyZSBXb3JrczIwMTIUKwMCZ2cWAQIBZAIZDxAPFgQeDEF1dG9Qb3N0QmFja2ceB1Zpc2libGVnZGRkZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAgUJVHJlZVZpZXcxBQlDaGVja0JveDFawcbMmdQv/Bo6D5WPaYRebo/9xlnAxps6w+w6cSv+FA==" type="hidden">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="SSAS%20Data%20Analysis%203_files/WebResource.js" type="text/javascript"></script>
+
+
+<script src="SSAS%20Data%20Analysis%203_files/WebResource_002.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+
+    function TreeView_PopulateNodeDoCallBack(context,param) {
+        WebForm_DoCallback(context.data.treeViewID,param,TreeView_ProcessNodeData,context,TreeView_ProcessNodeData,false);
+    }
+var TreeView1_Data = null;//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" type="hidden">
+	<input name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAA78w/vb3xzffD/i6nPTI21VKbJ0DW5tCAD+d6YARAQMFT9YyyR4qjX0bKJ2X6bXV1O53IKGLGA1IC6afSQjWjhbOpxOmW2aDyoXvDCUmStIHTP5mkKIL6NDkVB73VY8z8eofdMCkbsr1pEq9HJBw9edGm8LpB2n7429Npc+oiJEsBRXzQG681u4im9UfkOzQLYtwNy0eRIT3b2Kd1QXF7uQhfQ+LF2DSAUhdRYUsVZaic34O/GfAV4V4n0wgFZHr3flsOoPW3rv9if9K2mThiNhoRCr7j10BNyMBx5ZdwO4h6aKlvPD8E+PZwcvb1U1QhYn0FHN3GlK/lCsVuJKtt1b" type="hidden">
+</div>
+    <h1 id="mainHeader">DATA ANALYSIS</h1>
+    <div id="myDetails">
+        <p>CMPT 740</p>
+        <p>Suraiya Hameed</p>
+        <p>301246668</p>
+    </div>
+    <div class="space"></div>
+    <div id="treeView">
+    <p>        
+        <a href="#TreeView1_SkipLink"><img alt="Skip Navigation Links." src="SSAS%20Data%20Analysis%203_files/WebResource_004.gif" style="border-width:0px;" height="0" width="0"></a></p><div id="TreeView1">
+	<table style="border-width:0;" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><a id="TreeView1n0" href="javascript:TreeView_ToggleNode(TreeView1_Data,0,document.getElementById('TreeView1n0'),'%20',document.getElementById('TreeView1n0Nodes'))"><img src="SSAS%20Data%20Analysis%203_files/WebResource_002.gif" alt="Collapse Adventure Works2012" style="border-width:0;"></a></td><td class="treeNode TreeView1_2 rootNode TreeView1_4" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 rootNode TreeView1_3" id="TreeView1t0" style="border-style:none;font-size:1em;">Adventure Works2012</span></td>
+		</tr>
+	</tbody></table><div id="TreeView1n0Nodes" style="display:block;">
+		<table style="border-width:0;" cellpadding="0" cellspacing="0">
+			<tbody><tr>
+				<td><div style="width:20px;height:1px"></div></td><td><a id="TreeView1n1" href="javascript:TreeView_ToggleNode(TreeView1_Data,1,document.getElementById('TreeView1n1'),'%20',document.getElementById('TreeView1n1Nodes'))"><img src="SSAS%20Data%20Analysis%203_files/WebResource_002.gif" alt="Collapse Measures" style="border-width:0;"></a></td><td class="treeNode TreeView1_2" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1" id="TreeView1t1" style="border-style:none;font-size:1em;">Measures</span></td>
+			</tr>
+		</tbody></table><div id="TreeView1n1Nodes" style="display:block;">
+			<table style="border-width:0;" cellpadding="0" cellspacing="0">
+				<tbody><tr>
+					<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><a id="TreeView1n2" href="javascript:TreeView_ToggleNode(TreeView1_Data,2,document.getElementById('TreeView1n2'),'%20',document.getElementById('TreeView1n2Nodes'))"><img src="SSAS%20Data%20Analysis%203_files/WebResource_003.gif" alt="Expand Product Cost History" style="border-width:0;"></a></td><td class="treeNode TreeView1_2" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1" id="TreeView1t2" style="border-style:none;font-size:1em;">Product Cost History</span></td>
+				</tr>
+			</tbody></table><div id="TreeView1n2Nodes" style="display:none;">
+				<table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t3" style="border-style:none;font-size:1em;">Product Cost History Count</span></td>
+					</tr>
+				</tbody></table><table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t4" style="border-style:none;font-size:1em;">Standard Cost</span></td>
+					</tr>
+				</tbody></table>
+			</div><table style="border-width:0;" cellpadding="0" cellspacing="0">
+				<tbody><tr>
+					<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><a id="TreeView1n5" href="javascript:TreeView_ToggleNode(TreeView1_Data,5,document.getElementById('TreeView1n5'),'%20',document.getElementById('TreeView1n5Nodes'))"><img src="SSAS%20Data%20Analysis%203_files/WebResource_003.gif" alt="Expand Product Document" style="border-width:0;"></a></td><td class="treeNode TreeView1_2" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1" id="TreeView1t5" style="border-style:none;font-size:1em;">Product Document</span></td>
+				</tr>
+			</tbody></table><div id="TreeView1n5Nodes" style="display:none;">
+				<table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t6" style="border-style:none;font-size:1em;">Product Document Count</span></td>
+					</tr>
+				</tbody></table>
+			</div><table style="border-width:0;" cellpadding="0" cellspacing="0">
+				<tbody><tr>
+					<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><a id="TreeView1n7" href="javascript:TreeView_ToggleNode(TreeView1_Data,7,document.getElementById('TreeView1n7'),'%20',document.getElementById('TreeView1n7Nodes'))"><img src="SSAS%20Data%20Analysis%203_files/WebResource_003.gif" alt="Expand Product Inventory" style="border-width:0;"></a></td><td class="treeNode TreeView1_2" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1" id="TreeView1t7" style="border-style:none;font-size:1em;">Product Inventory</span></td>
+				</tr>
+			</tbody></table><div id="TreeView1n7Nodes" style="display:none;">
+				<table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t8" style="border-style:none;font-size:1em;">Bin</span></td>
+					</tr>
+				</tbody></table><table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t9" style="border-style:none;font-size:1em;">Product Inventory Count</span></td>
+					</tr>
+				</tbody></table><table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t10" style="border-style:none;font-size:1em;">Quantity - Product Inventory</span></td>
+					</tr>
+				</tbody></table>
+			</div><table style="border-width:0;" cellpadding="0" cellspacing="0">
+				<tbody><tr>
+					<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><a id="TreeView1n11" href="javascript:TreeView_ToggleNode(TreeView1_Data,11,document.getElementById('TreeView1n11'),'%20',document.getElementById('TreeView1n11Nodes'))"><img src="SSAS%20Data%20Analysis%203_files/WebResource_003.gif" alt="Expand Product List Price History" style="border-width:0;"></a></td><td class="treeNode TreeView1_2" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1" id="TreeView1t11" style="border-style:none;font-size:1em;">Product List Price History</span></td>
+				</tr>
+			</tbody></table><div id="TreeView1n11Nodes" style="display:none;">
+				<table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t12" style="border-style:none;font-size:1em;">List Price</span></td>
+					</tr>
+				</tbody></table><table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t13" style="border-style:none;font-size:1em;">Product List Price History Count</span></td>
+					</tr>
+				</tbody></table>
+			</div><table style="border-width:0;" cellpadding="0" cellspacing="0">
+				<tbody><tr>
+					<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><a id="TreeView1n14" href="javascript:TreeView_ToggleNode(TreeView1_Data,14,document.getElementById('TreeView1n14'),'%20',document.getElementById('TreeView1n14Nodes'))"><img src="SSAS%20Data%20Analysis%203_files/WebResource_003.gif" alt="Expand Product Vendor" style="border-width:0;"></a></td><td class="treeNode TreeView1_2" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1" id="TreeView1t14" style="border-style:none;font-size:1em;">Product Vendor</span></td>
+				</tr>
+			</tbody></table><div id="TreeView1n14Nodes" style="display:none;">
+				<table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t15" style="border-style:none;font-size:1em;">Average Lead Time</span></td>
+					</tr>
+				</tbody></table><table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t16" style="border-style:none;font-size:1em;">Last Receipt Cost</span></td>
+					</tr>
+				</tbody></table><table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t17" style="border-style:none;font-size:1em;">Max Order Qty</span></td>
+					</tr>
+				</tbody></table><table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t18" style="border-style:none;font-size:1em;">Min Order Qty</span></td>
+					</tr>
+				</tbody></table><table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t19" style="border-style:none;font-size:1em;">On Order Qty</span></td>
+					</tr>
+				</tbody></table><table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t20" style="border-style:none;font-size:1em;">Product Vendor Count</span></td>
+					</tr>
+				</tbody></table><table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t21" style="border-style:none;font-size:1em;">Standard Price</span></td>
+					</tr>
+				</tbody></table>
+			</div><table style="border-width:0;" cellpadding="0" cellspacing="0">
+				<tbody><tr>
+					<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><a id="TreeView1n22" href="javascript:TreeView_ToggleNode(TreeView1_Data,22,document.getElementById('TreeView1n22'),'%20',document.getElementById('TreeView1n22Nodes'))"><img src="SSAS%20Data%20Analysis%203_files/WebResource_003.gif" alt="Expand Purchase Order Detail" style="border-width:0;"></a></td><td class="treeNode TreeView1_2" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1" id="TreeView1t22" style="border-style:none;font-size:1em;">Purchase Order Detail</span></td>
+				</tr>
+			</tbody></table><div id="TreeView1n22Nodes" style="display:none;">
+				<table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t23" style="border-style:none;font-size:1em;">Line Total</span></td>
+					</tr>
+				</tbody></table><table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t24" style="border-style:none;font-size:1em;">Order Qty</span></td>
+					</tr>
+				</tbody></table><table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t25" style="border-style:none;font-size:1em;">Purchase Order Detail Count</span></td>
+					</tr>
+				</tbody></table><table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t26" style="border-style:none;font-size:1em;">Received Qty</span></td>
+					</tr>
+				</tbody></table><table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t27" style="border-style:none;font-size:1em;">Rejected Qty</span></td>
+					</tr>
+				</tbody></table><table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t28" style="border-style:none;font-size:1em;">Stocked Qty</span></td>
+					</tr>
+				</tbody></table><table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t29" style="border-style:none;font-size:1em;">Unit Price</span></td>
+					</tr>
+				</tbody></table>
+			</div><table style="border-width:0;" cellpadding="0" cellspacing="0">
+				<tbody><tr>
+					<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><a id="TreeView1n30" href="javascript:TreeView_ToggleNode(TreeView1_Data,30,document.getElementById('TreeView1n30'),'%20',document.getElementById('TreeView1n30Nodes'))"><img src="SSAS%20Data%20Analysis%203_files/WebResource_003.gif" alt="Expand Special Offer Product" style="border-width:0;"></a></td><td class="treeNode TreeView1_2" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1" id="TreeView1t30" style="border-style:none;font-size:1em;">Special Offer Product</span></td>
+				</tr>
+			</tbody></table><div id="TreeView1n30Nodes" style="display:none;">
+				<table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t31" style="border-style:none;font-size:1em;">Special Offer Product Count</span></td>
+					</tr>
+				</tbody></table>
+			</div><table style="border-width:0;" cellpadding="0" cellspacing="0">
+				<tbody><tr>
+					<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><a id="TreeView1n32" href="javascript:TreeView_ToggleNode(TreeView1_Data,32,document.getElementById('TreeView1n32'),'%20',document.getElementById('TreeView1n32Nodes'))"><img src="SSAS%20Data%20Analysis%203_files/WebResource_003.gif" alt="Expand Transaction History" style="border-width:0;"></a></td><td class="treeNode TreeView1_2" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1" id="TreeView1t32" style="border-style:none;font-size:1em;">Transaction History</span></td>
+				</tr>
+			</tbody></table><div id="TreeView1n32Nodes" style="display:none;">
+				<table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t33" style="border-style:none;font-size:1em;">Actual Cost</span></td>
+					</tr>
+				</tbody></table><table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t34" style="border-style:none;font-size:1em;">Quantity</span></td>
+					</tr>
+				</tbody></table><table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t35" style="border-style:none;font-size:1em;">Reference Order ID</span></td>
+					</tr>
+				</tbody></table><table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t36" style="border-style:none;font-size:1em;">Reference Order Line ID</span></td>
+					</tr>
+				</tbody></table><table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t37" style="border-style:none;font-size:1em;">Transaction History Count</span></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div><table style="border-width:0;" cellpadding="0" cellspacing="0">
+			<tbody><tr>
+				<td><div style="width:20px;height:1px"></div></td><td><a id="TreeView1n38" href="javascript:TreeView_ToggleNode(TreeView1_Data,38,document.getElementById('TreeView1n38'),'%20',document.getElementById('TreeView1n38Nodes'))"><img src="SSAS%20Data%20Analysis%203_files/WebResource_002.gif" alt="Collapse Dimensions" style="border-width:0;"></a></td><td class="treeNode TreeView1_2" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1" id="TreeView1t38" style="border-style:none;font-size:1em;">Dimensions</span></td>
+			</tr>
+		</tbody></table><div id="TreeView1n38Nodes" style="display:block;">
+			<table style="border-width:0;" cellpadding="0" cellspacing="0">
+				<tbody><tr>
+					<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><a id="TreeView1n39" href="javascript:TreeView_ToggleNode(TreeView1_Data,39,document.getElementById('TreeView1n39'),'%20',document.getElementById('TreeView1n39Nodes'))"><img src="SSAS%20Data%20Analysis%203_files/WebResource_003.gif" alt="Expand Product - Size Unit Measure" style="border-width:0;"></a></td><td class="treeNode TreeView1_2" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1" id="TreeView1t39" style="border-style:none;font-size:1em;">Product - Size Unit Measure</span></td>
+				</tr>
+			</tbody></table><div id="TreeView1n39Nodes" style="display:none;">
+				<table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t40" style="border-style:none;font-size:1em;">Product - Size Unit Measure.Name</span></td>
+					</tr>
+				</tbody></table><table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t41" style="border-style:none;font-size:1em;">Product - Size Unit Measure.Unit Measure Code</span></td>
+					</tr>
+				</tbody></table>
+			</div><table style="border-width:0;" cellpadding="0" cellspacing="0">
+				<tbody><tr>
+					<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><a id="TreeView1n42" href="javascript:TreeView_ToggleNode(TreeView1_Data,42,document.getElementById('TreeView1n42'),'%20',document.getElementById('TreeView1n42Nodes'))"><img src="SSAS%20Data%20Analysis%203_files/WebResource_003.gif" alt="Expand Product - Weight Unit Measure" style="border-width:0;"></a></td><td class="treeNode TreeView1_2" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1" id="TreeView1t42" style="border-style:none;font-size:1em;">Product - Weight Unit Measure</span></td>
+				</tr>
+			</tbody></table><div id="TreeView1n42Nodes" style="display:none;">
+				<table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t43" style="border-style:none;font-size:1em;">Product - Weight Unit Measure.Name</span></td>
+					</tr>
+				</tbody></table><table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t44" style="border-style:none;font-size:1em;">Product - Weight Unit Measure.Unit Measure Code</span></td>
+					</tr>
+				</tbody></table>
+			</div><table style="border-width:0;" cellpadding="0" cellspacing="0">
+				<tbody><tr>
+					<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><a id="TreeView1n45" href="javascript:TreeView_ToggleNode(TreeView1_Data,45,document.getElementById('TreeView1n45'),'%20',document.getElementById('TreeView1n45Nodes'))"><img src="SSAS%20Data%20Analysis%203_files/WebResource_003.gif" alt="Expand Product Inventory" style="border-width:0;"></a></td><td class="treeNode TreeView1_2" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1" id="TreeView1t45" style="border-style:none;font-size:1em;">Product Inventory</span></td>
+				</tr>
+			</tbody></table><div id="TreeView1n45Nodes" style="display:none;">
+				<table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t46" style="border-style:none;font-size:1em;">Product ID</span></td>
+					</tr>
+				</tbody></table><table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t47" style="border-style:none;font-size:1em;">Product Inventory - Product ID</span></td>
+					</tr>
+				</tbody></table><table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t48" style="border-style:none;font-size:1em;">Quantity</span></td>
+					</tr>
+				</tbody></table>
+			</div><table style="border-width:0;" cellpadding="0" cellspacing="0">
+				<tbody><tr>
+					<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><a id="TreeView1n49" href="javascript:TreeView_ToggleNode(TreeView1_Data,49,document.getElementById('TreeView1n49'),'%20',document.getElementById('TreeView1n49Nodes'))"><img src="SSAS%20Data%20Analysis%203_files/WebResource_003.gif" alt="Expand Product" style="border-width:0;"></a></td><td class="treeNode TreeView1_2" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1" id="TreeView1t49" style="border-style:none;font-size:1em;">Product</span></td>
+				</tr>
+			</tbody></table><div id="TreeView1n49Nodes" style="display:none;">
+				<table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t50" style="border-style:none;font-size:1em;">List Price</span></td>
+					</tr>
+				</tbody></table><table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t51" style="border-style:none;font-size:1em;">Name</span></td>
+					</tr>
+				</tbody></table><table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t52" style="border-style:none;font-size:1em;">Product ID</span></td>
+					</tr>
+				</tbody></table><table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t53" style="border-style:none;font-size:1em;">Product Model ID</span></td>
+					</tr>
+				</tbody></table><table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t54" style="border-style:none;font-size:1em;">Product Subcategory ID</span></td>
+					</tr>
+				</tbody></table><table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t55" style="border-style:none;font-size:1em;">Size Unit Measure Code</span></td>
+					</tr>
+				</tbody></table><table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t56" style="border-style:none;font-size:1em;">Weight Unit Measure Code</span></td>
+					</tr>
+				</tbody></table>
+			</div><table style="border-width:0;" cellpadding="0" cellspacing="0">
+				<tbody><tr>
+					<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><a id="TreeView1n57" href="javascript:TreeView_ToggleNode(TreeView1_Data,57,document.getElementById('TreeView1n57'),'%20',document.getElementById('TreeView1n57Nodes'))"><img src="SSAS%20Data%20Analysis%203_files/WebResource_003.gif" alt="Expand Special Offer Product" style="border-width:0;"></a></td><td class="treeNode TreeView1_2" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1" id="TreeView1t57" style="border-style:none;font-size:1em;">Special Offer Product</span></td>
+				</tr>
+			</tbody></table><div id="TreeView1n57Nodes" style="display:none;">
+				<table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t58" style="border-style:none;font-size:1em;">Product ID</span></td>
+					</tr>
+				</tbody></table><table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t59" style="border-style:none;font-size:1em;">Special Offer ID</span></td>
+					</tr>
+				</tbody></table>
+			</div><table style="border-width:0;" cellpadding="0" cellspacing="0">
+				<tbody><tr>
+					<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><a id="TreeView1n60" href="javascript:TreeView_ToggleNode(TreeView1_Data,60,document.getElementById('TreeView1n60'),'%20',document.getElementById('TreeView1n60Nodes'))"><img src="SSAS%20Data%20Analysis%203_files/WebResource_003.gif" alt="Expand Transaction History" style="border-width:0;"></a></td><td class="treeNode TreeView1_2" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1" id="TreeView1t60" style="border-style:none;font-size:1em;">Transaction History</span></td>
+				</tr>
+			</tbody></table><div id="TreeView1n60Nodes" style="display:none;">
+				<table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t61" style="border-style:none;font-size:1em;">Actual Cost</span></td>
+					</tr>
+				</tbody></table><table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t62" style="border-style:none;font-size:1em;">Product ID</span></td>
+					</tr>
+				</tbody></table><table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t63" style="border-style:none;font-size:1em;">Quantity</span></td>
+					</tr>
+				</tbody></table><table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t64" style="border-style:none;font-size:1em;">Transaction ID</span></td>
+					</tr>
+				</tbody></table>
+			</div><table style="border-width:0;" cellpadding="0" cellspacing="0">
+				<tbody><tr>
+					<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><a id="TreeView1n65" href="javascript:TreeView_ToggleNode(TreeView1_Data,65,document.getElementById('TreeView1n65'),'%20',document.getElementById('TreeView1n65Nodes'))"><img src="SSAS%20Data%20Analysis%203_files/WebResource_003.gif" alt="Expand Unit Measure" style="border-width:0;"></a></td><td class="treeNode TreeView1_2" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1" id="TreeView1t65" style="border-style:none;font-size:1em;">Unit Measure</span></td>
+				</tr>
+			</tbody></table><div id="TreeView1n65Nodes" style="display:none;">
+				<table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t66" style="border-style:none;font-size:1em;">Unit Measure.Name</span></td>
+					</tr>
+				</tbody></table><table style="border-width:0;" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><div style="width:20px;height:1px"></div></td><td><img src="SSAS%20Data%20Analysis%203_files/WebResource.gif" alt=""></td><td class="treeNode TreeView1_2 leafNode TreeView1_6" style="white-space:nowrap;"><span class="TreeView1_0 treeNode TreeView1_1 leafNode TreeView1_5" id="TreeView1t67" style="border-style:none;font-size:1em;">Unit Measure.Unit Measure Code</span></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+	</div>
+</div><a id="TreeView1_SkipLink"></a>
+    <p></p>
+    </div>
+    <div id="queryView">
+    <p>
+        <span id="Server_Label" class="label">Server Name</span>
+        <input name="ServerName_TextBox" value="WIN-NVQQCFCV2JO" id="ServerName_TextBox" class="editbox" type="text">
+        <input name="Button2" value="Generate Schema List" id="Button2" class="button" type="submit">
+    </p>
+    <p>
+        <span id="Schema_Label" class="label">Schema List</span>    
+        <select name="SchemaDropDownList" onchange="javascript:setTimeout('__doPostBack(\'SchemaDropDownList\',\'\')', 0)" id="SchemaDropDownList" class="editbox">
+	<option value="Choose">Choose</option>
+	<option selected="selected" value="SampleOLAPPro">SampleOLAPPro</option>
+	<option value="SSASWarehouse">SSASWarehouse</option>
+
+</select>
+    </p>
+    <p>
+        <span id="Cube_Label" class="label">Cube List</span>
+        <select name="CubeDropDownList" onchange="javascript:setTimeout('__doPostBack(\'CubeDropDownList\',\'\')', 0)" id="CubeDropDownList" class="editbox">
+	<option value="Choose">Choose</option>
+	<option selected="selected" value="Adventure Works2012">Adventure Works2012</option>
+
+</select>
+    </p>
+    <p>
+        <span id="MDXQuery_Label" class="label">MDX Query</span>
+        <textarea name="MDXQuery_TextBox" rows="5" cols="50" id="MDXQuery_TextBox" class="MDXeditbox">SELECT
+ NON EMPTY { [Measures].[Max Order Qty], [Measures].[List 
+Price],[Measures].[Received Qty]}ON COLUMNS,NON EMPTY TOPCOUNT({ 
+([Product].[Name].[Name].ALLMEMBERS ) },10) ON ROWS FROM [Adventure 
+Works2012]</textarea>
+        <input name="Button1" value="Execute MDX" id="Button1" class="button" type="submit">
+    </p>
+    <div class="space">
+    <p>       
+        <input name="Button3" value="Reset" id="Button3" class="Resetbutton" type="submit">
+    </p>
+    </div>
+    </div>
+    <div id="queryResult">
+    <div class="space"></div>
+    <div id="resulttable"></div>
+    <div class="space"></div>
+    <div>
+        <label for="CheckBox1">Single Chart</label><input id="CheckBox1" name="CheckBox1" onclick="javascript:setTimeout('__doPostBack(\'CheckBox1\',\'\')', 0)" type="checkbox">
+        </div>
+    <div class="space"></div>
+    <p><img id="Chart1" src="SSAS%20Data%20Analysis%203_files/ChartImg.png" alt="" usemap="#Chart1ImageMap" style="height:1200px;width:630px;border-width:0px;">
+<map name="Chart1ImageMap" id="Chart1ImageMap">
+
+	<area shape="rect" coords="529,848,560,863" title="2964" alt="2964">
+	<area shape="rect" coords="469,1046,490,1061" title="75" alt="75">
+	<area shape="rect" coords="401,1040,427,1055" title="150" alt="150">
+	<area shape="rect" coords="336,1040,362,1055" title="150" alt="150">
+	<area shape="rect" coords="271,1004,296,1018" title="630" alt="630">
+	<area shape="rect" coords="205,1021,231,1036" title="400" alt="400">
+	<area shape="rect" coords="140,1040,166,1055" title="153" alt="153">
+	<area shape="rect" coords="527,661,561,676" title="20.24" alt="20.24">
+	<area shape="rect" coords="468,656,488,670" title="25" alt="25">
+	<area shape="rect" coords="398,675,426,690" title="7.95" alt="7.95">
+	<area shape="rect" coords="338,684,353,699" title="0" alt="0">
+	<area shape="rect" coords="257,654,301,669" title="26.2784" alt="26.2784">
+	<area shape="rect" coords="200,503,226,517" title="159" alt="159">
+	<area shape="rect" coords="140,684,154,699" title="0" alt="0">
+	<area shape="rect" coords="532,298,558,313" title="100" alt="100">
+	<area shape="rect" coords="467,279,492,294" title="200" alt="200">
+	<area shape="rect" coords="401,222,427,236" title="500" alt="500">
+	<area shape="rect" coords="341,316,356,331" title="5" alt="5">
+	<area shape="rect" coords="268,127,299,141" title="1000" alt="1000">
+	<area shape="rect" coords="205,222,231,236" title="500" alt="500">
+	<area shape="rect" coords="145,316,160,331" title="5" alt="5">
+	<area shape="rect" coords="19,36,610,61" title="Title" alt="Title">
+</map>
+        </p>
+    </div>
+    
+<script type="text/javascript">
+//<![CDATA[
+var TreeView1_ImageArray =  new Array('', '', '', '/WebResource.axd?d=gHGvsnIA5iazuHJxGCKbFi4alSbiYf4ZLem7zh1nLBzdnuc9txNgkFTASIituIpY7qm5WXjJWfeuMKiMkCaGimB7Yi-MPhRqIsHh5u04p2SyBFF92SJAvqcjufE8lGrN0&t=635418606520000000', '/WebResource.axd?d=7vLR64GrrFFSodPCLLTvMJKyXuBjefiZAIXtkR8zRaQ3KkgUyD1kUyXilgm-PzrPdJmUkcdN720iozh0leEMfnrnVJQNLQiCOYd5O0JKvrg28HhJGf8rXtUCy1lUTDIj0&t=635418606520000000', '/WebResource.axd?d=hZu598Uu4z2cp4DgL7k7VWfsWmk3L4H1_VDaJTb1WOHCE8K4wg1ry6PVA9Q92_KOVd_ct7oO18Pi4-7EYfxeuWuD4OXSulDI7o7tMg-FabmktTHLWg6ld18tMTV02pFw0&t=635418606520000000');
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();var TreeView1_Data = new Object();
+TreeView1_Data.images = TreeView1_ImageArray;
+TreeView1_Data.collapseToolTip = "Collapse {0}";
+TreeView1_Data.expandToolTip = "Expand {0}";
+TreeView1_Data.expandState = theForm.elements['TreeView1_ExpandState'];
+TreeView1_Data.selectedNodeID = theForm.elements['TreeView1_SelectedNode'];
+TreeView1_Data.selectedClass = 'TreeView1_8 selectNode ';
+TreeView1_Data.selectedHyperLinkClass = 'TreeView1_7 selectNode ';
+(function() {
+  for (var i=0;i<6;i++) {
+  var preLoad = new Image();
+  if (TreeView1_ImageArray[i].length > 0)
+    preLoad.src = TreeView1_ImageArray[i];
+  }
+})();
+TreeView1_Data.lastIndex = 68;
+TreeView1_Data.populateLog = theForm.elements['TreeView1_PopulateLog'];
+TreeView1_Data.treeViewID = 'TreeView1';
+TreeView1_Data.name = 'TreeView1_Data';
+//]]>
+</script>
+</form>
+
+
+</body></html>
