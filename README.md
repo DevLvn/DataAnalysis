@@ -16,7 +16,7 @@ atleast one OLAP cube is built and deployed in Microsoft SQL Server Analysis Ser
 * SSAS Data Analysis 3.htm : MDX query is executed, and chart generated for individual measure and dimension combination
 * SSAS Data Analysis 4.htm: Single chart combining all the measures is generated for comparison. 
 
-Source Code is in folder 'OLAPProjectDBMS'
+######Source Code is in folder 'OLAPProjectDBMS'
 
 ###Summary
 Analyzing OLAP cube stored in Microsoft SQL Server Analysis Services(SSAS) from web application using XML for Analysis. 
