@@ -1,4 +1,5 @@
 # DataAnalysis
+Analyzing OLAP cube stored in Microsoft SQL Server Analysis Services(SSAS) from web application using XML for Analysis. 
 
 ##Description
 List of schemas and cubes are dynamically generated based on SSAS server name passed. Discover command in XML for Analysis are wrapped in SOAP envelop and sent to SSAS; the XML response is parsed and data is extracted to build a TreeView containing all dimensions and measures in the cube.
@@ -18,5 +19,5 @@ atleast one OLAP cube is built and deployed in Microsoft SQL Server Analysis Ser
 
 ######Source Code is in folder 'OLAPProjectDBMS'
 
-###Summary
-Analyzing OLAP cube stored in Microsoft SQL Server Analysis Services(SSAS) from web application using XML for Analysis. 
+
+
