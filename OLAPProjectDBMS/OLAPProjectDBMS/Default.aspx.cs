@@ -17,10 +17,20 @@ namespace OLAPProjectDBMS
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
+        //Stores the list of catalogs, cubes and rows(row header/name) returned by MDX respectively 
         public static ArrayList catalogList, cubeList, rowList;
+
+        //Stores server, schema and cube choosen from the list by user
         public static string serverName,schema,cube;
+
+        //dimensionHierarchyList contains each Dimension name as key and members of each dimension as values(ArrayList)
+        //measureHierarchyList contains each measure group name as key and members of each group as values(ArrayList)
         public static List<KeyValuePair<string, ArrayList>> dimensionHierarchyList, measureHierarchyList;
+
+        //axesList contains 2 ArrayList, 1st ArrayList is the columns names returned and 2nd Arraylist is list of rows returned
+        //cellDataList : one list for each row returned, arraylist contains values for each column in that row
         public static List<ArrayList> axesList, cellDataList;
+
         public static double maxCellValue;
         
         protected void Page_Load(object sender, EventArgs e)
